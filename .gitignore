@@ -1,12 +1,14 @@
 *.class
 *.jar
 *.log
+.hgignore
 .lein-deps-sum
 .lein-failures
 .lein-plugins/
 .lein-repl-history
 .nrepl-port
 /.env
+/.idea
 /.lein-*
 /.nrepl-port
 /.repl
