@@ -23,7 +23,8 @@
   :plugins [[lein-environ "1.0.2"]
             [lein-cljsbuild "1.1.1"]
             [lein-asset-minifier "0.2.7"
-             :exclusions [org.clojure/clojure]]]
+             :exclusions [org.clojure/clojure]]
+            [org.clojure/core.cache "0.6.5"]]
 
   :ring {:handler clojuredocs.handler/app
          :uberwar-name "clojuredocs.war"}
@@ -44,7 +45,10 @@
 
   :minify-assets
   {:assets
-   {"resources/public/css/site.min.css" "resources/public/css/site.css"}}
+   {"resources/public/css/site.min.css"
+    "resources/public/css/site.css"
+    "resources/public/css/bootstrap.min.css"
+    "resources/public/css/bootstrap-theme.min.css"}}
 
   :cljsbuild
   {:builds {:min
