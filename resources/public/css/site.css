@@ -36,36 +36,62 @@ a:hover {
 */
 
 @import 'https://fonts.googleapis.com/css?family=Merriweather';
+@import 'https://fonts.googleapis.com/css?family=Lora';
 
-html {
+html, body, div {
     font-size: 100%;
 }
 
 body {
     color: #333;
+    font-family: 'Lora', georgia, serif;
+    background-color: #f8f8f8;
 }
 
-@media only screen
-and (min-device-width : 320px)
-and (max-device-width : 480px) {
-    header div.container {
-        font-family: 'Merriweather', georgia, serif;
-        text-shadow: 1px 1px white;
-        font-size: 2em;
-    }
+header {
+    width: 100%;
+    font-size: 3em;
+    height: 1.4em;
+    background-color: #f8f8f8;
+    border-bottom: #ccc 1px solid;
+    display: block;
 }
 
-@media (min-width: 481px) {
-    header {
-        width: 100%;
-        height: 60px;
-        background-color: #f8f8f8;
-        border-bottom: #ccc 1px solid;
-    }
+header div.container {
+    font-family: 'Merriweather', georgia, serif;
+    text-shadow: 1px 1px white;
+}
 
-    header div.container {
-        font-family: 'Merriweather', georgia, serif;
-        text-shadow: 1px 1px white;
-        font-size: 3em;
-    }
+header div.container a {
+    color: #333;
+}
+
+main {
+    padding-top: 1em;
+    width: 100%;
+    background-color: white;
+}
+
+.site-description {
+    font-size: 1.5em;
+}
+
+.box {
+    #background-color: #f8f8f8;
+    font-size: 0.8em;
+}
+
+.inner-box {
+  margin-right: 1em;
+  position: relative;
+  padding: 1em;
+}
+
+footer {
+    width: 100%;
+    font-size: small;
+    background-color: #f8f8f8;
+    border-top: #ccc 1px solid;
+    display: block;
+    text-align: center;
 }
