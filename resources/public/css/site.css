@@ -1,5 +1,6 @@
+/*
 .body-container {
-  font-family: 'Helvetica Neue', Verdana, Helvetica, Arial, sans-serif;
+  font-family: 'Geo';
   max-width: 600px;
   margin: 0 auto;
   padding-top: 72px;
@@ -31,4 +32,24 @@ a {
 
 a:hover {
   text-decoration: underline;
+}
+*/
+
+@import 'https://fonts.googleapis.com/css?family=Merriweather';
+
+body {
+    color: #333;
+}
+
+header {
+    width: 100%;
+    height: 60px;
+    background-color: #f8f8f8;
+    border-bottom: #ccc 1px solid;
+}
+
+header div.container {
+    font-family: 'Merriweather', georgia, serif;
+    text-shadow: 1px 1px white;
+    font-size: 3em;
 }
