@@ -24,7 +24,8 @@
             [lein-cljsbuild "1.1.1"]
             [lein-asset-minifier "0.2.7"
              :exclusions [org.clojure/clojure]]
-            [org.clojure/core.cache "0.6.5"]]
+            [org.clojure/core.cache "0.6.5"]
+            [lein-ring "0.9.7"]]
 
   :ring {:handler clojuredocs.handler/app
          :uberwar-name "clojuredocs.war"}
