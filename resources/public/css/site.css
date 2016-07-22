@@ -48,24 +48,24 @@ body {
 @media only screen
 and (min-device-width : 320px)
 and (max-device-width : 480px) {
-header div.container {
-    font-family: 'Merriweather', georgia, serif;
-    text-shadow: 1px 1px white;
-    font-size: 2em;
+    header div.container {
+        font-family: 'Merriweather', georgia, serif;
+        text-shadow: 1px 1px white;
+        font-size: 2em;
+    }
 }
 
 @media (min-width: 601px) {
+    header {
+        width: 100%;
+        height: 60px;
+        background-color: #f8f8f8;
+        border-bottom: #ccc 1px solid;
+    }
 
-header {
-    width: 100%;
-    height: 60px;
-    background-color: #f8f8f8;
-    border-bottom: #ccc 1px solid;
-}
-}
-
-header div.container {
-    font-family: 'Merriweather', georgia, serif;
-    text-shadow: 1px 1px white;
-    font-size: 3em;
+    header div.container {
+        font-family: 'Merriweather', georgia, serif;
+        text-shadow: 1px 1px white;
+        font-size: 3em;
+    }
 }
