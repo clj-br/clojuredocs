@@ -70,6 +70,7 @@ main {
     padding-top: 1em;
     width: 100%;
     background-color: white;
+    padding-bottom: 1em;
 }
 
 .site-description {
@@ -77,14 +78,19 @@ main {
 }
 
 .box {
-    #background-color: #f8f8f8;
     font-size: 0.8em;
+    text-shadow: 1px 1px white;
 }
 
 .inner-box {
-  margin-right: 1em;
   position: relative;
   padding: 1em;
+  background-color: #f8f8f8;
+}
+
+.box h3 {
+    font-family: 'Merriweather', georgia, serif;
+    text-weight: bold;
 }
 
 footer {
