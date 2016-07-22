@@ -42,12 +42,6 @@ html, body, div {
     font-size: 100%;
 }
 
-@media only screen
-and (min-device-width : 320px)
-and (max-device-width : 480px) {
-    font-size: 14px;
-}
-
 body {
     color: #333;
     font-family: 'Lora', georgia, serif;
@@ -106,4 +100,13 @@ footer {
     border-top: #ccc 1px solid;
     display: block;
     text-align: center;
+}
+
+@media only screen
+and (min-device-width : 320px)
+and (max-device-width : 480px) {
+
+html, body, div {
+    font-size: 12px;
+}
 }
