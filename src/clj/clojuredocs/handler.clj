@@ -26,12 +26,28 @@
    (include-css (if (env :dev) "/css/bootstrap-theme.css" "/css/bootstrap-theme.min.css"))
    [:title "ClojureDocs BR"]])
 
+(defn header []
+  [:header
+   [:div {:class "container"}
+    [:a {:href "/"} "ClojureDocs BR"]]])
+
+(defn footer []
+  [:footer
+   [:div {:class "container"}
+    [:p "Este site não tem qualquer relação ou afiliação com o " [:a {:href "http://clojuredocs.org"} "ClojureDocs
+  original"] ", apesar do original ter servido de inspiração e ponto de partida."]
+    [:p "Clojure © 2008 Rich Hickey - http://clojure.org"]
+    [:p "ClojureDocs © 2010 Zachary Kim - http://zacharykim.com"]
+    [:p "ClojureDocs BR © 2013 Plínio Balduino / Clojure Brasil"]]])
+
 (def loading-page
   (html5 {:lang "pt-BR"}
-    (head)
-    [:body {:class "body-container"}
-     mount-target
-     (include-js "/js/app.js")]))
+         (head)
+         [:body {:role "document"}
+          (header)
+          mount-target
+          (footer)
+          (include-js "/js/app.js")]))
 
 
 (defroutes routes
