@@ -3,3 +3,6 @@ deployment:
     branch: master
     heroku:
       appname: clojuredocs
+notify:
+  webhooks:
+    - url: https://circleci-bot.herokuapp.com/build/15844725 
