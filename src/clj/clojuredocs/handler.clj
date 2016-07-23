@@ -3,14 +3,8 @@
             [compojure.route :refer [not-found resources]]
             [hiccup.page :refer [include-js include-css html5]]
             [clojuredocs.middleware :refer [wrap-middleware]]
-            [config.core :refer [env]]))
-
-(def mount-target
-  [:div#app
-   [:h3 "ClojureScript has not been compiled!"]
-   [:p "please run "
-    [:b "lein figwheel"]
-    " in order to start the compiler"]])
+            [config.core :refer [env]]
+            [clojuredocs.shared :refer [home-page]]))
 
 (defn head []
   [:head
@@ -45,7 +39,8 @@
          (head)
          [:body {:role "document"}
           (header)
-          mount-target
+          [:main {:id "app"}
+           (home-page)]
           (footer)
           (include-js "/js/app.js")]))
 
