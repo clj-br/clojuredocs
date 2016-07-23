@@ -15,7 +15,8 @@
    [:meta {:name    "description"
            :content "ClojureDocs BR é o primeiro site colaborativo em Língua Portuguesa contendo a documentação traduzida da linguagem Clojure e exemplos para as suas funções e macros."}]
 
-   (include-css (if (env :dev) "/css/bootstrap.css" "/css/bootstrap.min.css"))
+   (include-css "/css/bootstrap.css")
+   ; (include-css (if (env :dev) "/css/bootstrap.css" "/css/bootstrap.min.css"))
    (include-css (if (env :dev) "/css/bootstrap-theme.css" "/css/bootstrap-theme.min.css"))
    (include-css (if (env :dev) "/css/site.css" "/css/site.min.css"))
    [:title "ClojureDocs BR"]])
