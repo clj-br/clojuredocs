@@ -5,4 +5,4 @@ deployment:
       appname: clojuredocs
 notify:
   webhooks:
-    - url: https://circleci-bot.herokuapp.com/build/15844725 
+    - url: https://circleci-bot.herokuapp.com/build/15844725
