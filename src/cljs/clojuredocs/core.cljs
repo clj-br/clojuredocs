@@ -9,8 +9,10 @@
 ;; Views
 
 (defn show-namespace []
-  [:b "namespace"]
-  )
+  [:b "namespace"])
+
+(defn show-var []
+  [:i "var"])
 
 (defn current-page []
   [(session/get :current-page)])
@@ -21,6 +23,10 @@
 
 (sec/defroute "/:namespace" []
               (session/put! :current-page #'show-namespace))
+
+(sec/defroute "/:namespace/:var" []
+              (session/put! :current-page #'show-var))
+
 ;; -------------------------
 ;; Initialize app
 
