@@ -4,7 +4,7 @@
             [hiccup.page :refer [include-js include-css html5]]
             [clojuredocs.middleware :refer [wrap-middleware]]
             [config.core :refer [env]]
-            [clojuredocs.shared :refer [home-page]]))
+            [clojuredocs.shared :as sh]))
 
 (defn head []
   [:head
@@ -31,9 +31,19 @@
    [:div {:class "container"}
     [:p "Este site não tem qualquer relação ou afiliação com o " [:a {:href "http://clojuredocs.org"} "ClojureDocs
   original"] ", apesar do original ter servido de inspiração e ponto de partida."]
-    [:p "Clojure © 2008 Rich Hickey - http://clojure.org"]
-    [:p "ClojureDocs © 2010 Zachary Kim - http://zacharykim.com"]
+    [:p "Clojure © 2008 Rich Hickey - " [:a {:href="http://clojure.org"} "http://clojure.org"]]
+    [:p "ClojureDocs © 2010 Zachary Kim - " [:a {:href "http://zacharykim.com"} "http://zacharykim.com"]]
     [:p "ClojureDocs BR © 2013 Plínio Balduino / Clojure Brasil"]]])
+
+(def home-page
+  (html5 {:lang "pt-BR"}
+         (head)
+         [:body {:role "document"}
+          (header)
+          [:main {:id "app"}
+           (sh/home-page)]
+          (footer)
+          (include-js "/js/app.js")]))
 
 (def loading-page
   (html5 {:lang "pt-BR"}
@@ -41,14 +51,15 @@
          [:body {:role "document"}
           (header)
           [:main {:id "app"}
-           (home-page)]
+           [:h3 "Carregando..."]]
           (footer)
           (include-js "/js/app.js")]))
 
 
 (defroutes routes
-           (GET "/" [] loading-page)
-           (resources "/")
-           (not-found "Not Found"))
+           (GET "/:namespace/:var" [] loading-page)
+           (GET "/:namespace" [] loading-page)
+           (GET "/"           [] home-page)
+           (resources "/"))
 
 (def app (wrap-middleware #'routes))
