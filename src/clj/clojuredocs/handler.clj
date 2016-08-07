@@ -1,10 +1,10 @@
 (ns clojuredocs.handler
-  (:require [compojure.core :refer [GET defroutes]]
-            [compojure.route :refer [not-found resources]]
-            [hiccup.page :refer [include-js include-css html5]]
-            [clojuredocs.middleware :refer [wrap-middleware]]
-            [config.core :refer [env]]
-            [clojuredocs.shared :as sh]))
+ (:require [compojure.core :refer [GET defroutes]]
+           [compojure.route :refer [not-found resources]]
+           [hiccup.page :refer [include-js include-css html5]]
+           [clojuredocs.middleware :refer [wrap-middleware]]
+           [config.core :refer [env]]
+           [clojuredocs.shared :as sh]))
 
 (defn head []
   [:head
@@ -31,7 +31,7 @@
    [:div {:class "container"}
     [:p "Este site não tem qualquer relação ou afiliação com o " [:a {:href "http://clojuredocs.org"} "ClojureDocs
   original"] ", apesar do original ter servido de inspiração e ponto de partida."]
-    [:p "Clojure © 2008 Rich Hickey - " [:a {:href="http://clojure.org"} "http://clojure.org"]]
+    [:p "Clojure © 2008 Rich Hickey - " [:a {:href "http://clojure.org"} "http://clojure.org"]]
     [:p "ClojureDocs © 2010 Zachary Kim - " [:a {:href "http://zacharykim.com"} "http://zacharykim.com"]]
     [:p "ClojureDocs BR © 2013 Plínio Balduino / Clojure Brasil"]]])
 
