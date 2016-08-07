@@ -19,3 +19,12 @@
   claras e completas."]
       [:p "A graça do ClojureDocs BR está na colaboração dos usuários. Alguns usuários aprendem ou tiram
   dúvidas, outros ajudam a ensinar, e no final todo mundo fica feliz."]]]]])
+
+(defn footer []
+  [:footer
+   [:div {:class "container"}
+    [:p "Este site não tem qualquer relação ou afiliação com o " [:a {:href "http://clojuredocs.org"} "ClojureDocs
+  original"] ", apesar do original ter servido de inspiração e ponto de partida."]
+    [:p "Clojure © 2008 Rich Hickey - " [:a {:href "http://clojure.org"} "http://clojure.org"]]
+    [:p "ClojureDocs © 2010 Zachary Kim - " [:a {:href "http://zacharykim.com"} "http://zacharykim.com"]]
+    [:p "ClojureDocs BR © 2013 Plínio Balduino / Clojure Brasil"]]])

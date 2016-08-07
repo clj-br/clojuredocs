@@ -26,23 +26,14 @@
    [:div {:class "container"}
     [:a {:href "/"} "ClojureDocs BR"]]])
 
-(defn footer []
-  [:footer
-   [:div {:class "container"}
-    [:p "Este site não tem qualquer relação ou afiliação com o " [:a {:href "http://clojuredocs.org"} "ClojureDocs
-  original"] ", apesar do original ter servido de inspiração e ponto de partida."]
-    [:p "Clojure © 2008 Rich Hickey - " [:a {:href "http://clojure.org"} "http://clojure.org"]]
-    [:p "ClojureDocs © 2010 Zachary Kim - " [:a {:href "http://zacharykim.com"} "http://zacharykim.com"]]
-    [:p "ClojureDocs BR © 2013 Plínio Balduino / Clojure Brasil"]]])
-
 (def home-page
   (html5 {:lang "pt-BR"}
          (head)
          [:body {:role "document"}
           (header)
           [:main {:id "app"}
-           (sh/home-page)]
-          (footer)
+            (sh/home-page)]
+          (sh/footer)
           (include-js "/js/app.js")]))
 
 (def loading-page
@@ -52,7 +43,7 @@
           (header)
           [:main {:id "app"}
            [:h3 "Carregando..."]]
-          (footer)
+          (sh/footer)
           (include-js "/js/app.js")]))
 
 
