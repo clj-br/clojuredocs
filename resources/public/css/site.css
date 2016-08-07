@@ -44,15 +44,12 @@ html, body, div {
 body {
     color: #333;
     font-family: 'Open Sans', Helvetica, sans-serif;
-    background-color: #f8f8f8;
 }
 
 header {
   text-align: center;
   width: 100%;
   font-size: 3em;
-  height: 1.4em;
-  display: block;
 }
 
 header div.container {
@@ -60,12 +57,18 @@ header div.container {
     text-shadow: 1px 1px white;
 }
 
+#home-var {
+  font-size: 0.5em;
+  width: 100%;
+  font-family: 'Open Sans', Helvetica, sans-serif;
+}
+
 header div.container a {
     color: #333;
 }
 
 main {
-    padding-top: 1em;
+/*    padding-top: 1em; */
     width: 100%;
     background-color: white;
     padding-bottom: 1em;
@@ -74,10 +77,11 @@ main {
 .site-description {
   font-size: 1.5em;
   text-align: justify;
+  margin-top: 1em;
 }
 
 .box {
-  font-size: 0.8em;
+  /* font-size: 0.8em; */
   text-shadow: 1px 1px white;
   text-align: justify;
 }
@@ -90,7 +94,6 @@ main {
 footer {
     width: 100%;
     font-size: small;
-    background-color: #f8f8f8;
     display: block;
     text-align: center;
 }
