@@ -35,8 +35,7 @@ a:hover {
 }
 */
 
-@import 'https://fonts.googleapis.com/css?family=Merriweather';
-@import 'https://fonts.googleapis.com/css?family=Lora';
+@import 'https://fonts.googleapis.com/css?family=Montserrat|Open+Sans';
 
 html, body, div {
     font-size: 100%;
@@ -44,21 +43,20 @@ html, body, div {
 
 body {
     color: #333;
-    font-family: 'Lora', georgia, serif;
+    font-family: 'Open Sans', Helvetica, sans-serif;
     background-color: #f8f8f8;
 }
 
 header {
-    width: 100%;
-    font-size: 3em;
-    height: 1.4em;
-    background-color: #f8f8f8;
-    border-bottom: #ccc 1px solid;
-    display: block;
+  text-align: center;
+  width: 100%;
+  font-size: 3em;
+  height: 1.4em;
+  display: block;
 }
 
 header div.container {
-    font-family: 'Merriweather', georgia, serif;
+    font-family: 'Montserrat', Helvetica, sans-serif;
     text-shadow: 1px 1px white;
 }
 
@@ -74,22 +72,18 @@ main {
 }
 
 .site-description {
-    font-size: 1.5em;
+  font-size: 1.5em;
+  text-align: justify;
 }
 
 .box {
-    font-size: 0.8em;
-    text-shadow: 1px 1px white;
-}
-
-.inner-box {
-  position: relative;
-  padding: 1em;
-  background-color: #f8f8f8;
+  font-size: 0.8em;
+  text-shadow: 1px 1px white;
+  text-align: justify;
 }
 
 .box h3 {
-    font-family: 'Merriweather', georgia, serif;
+    font-family: 'Montserrat', Helvetica, sans-serif;
     text-weight: bold;
 }
 
@@ -97,7 +91,6 @@ footer {
     width: 100%;
     font-size: small;
     background-color: #f8f8f8;
-    border-top: #ccc 1px solid;
     display: block;
     text-align: center;
 }
