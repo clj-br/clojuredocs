@@ -6,3 +6,4 @@ deployment:
 notify:
   webhooks:
     - url: https://circleci-bot.herokuapp.com/build/15844725
+    - url: https://webhooks.gitter.im/e/99764bb4ccb7e7ee0300
