@@ -20,7 +20,8 @@
                 [venantius/accountant "0.1.7"
                  :exclusions [org.clojure/tools.reader]]
                 [migratus "0.8.28"]
-                [org.postgresql/postgresql "9.4.1207"]]
+                [org.postgresql/postgresql "9.4.1207"]
+                [conman "0.6.0"]]
 
  :plugins [[lein-environ "1.0.2"]
            [lein-cljsbuild "1.1.1"]
@@ -118,7 +119,6 @@
                                       :exclusions [org.clojure/tools.reader]]
                                      [refactor-nrepl "2.0.0-SNAPSHOT"
                                       :exclusions [org.clojure/clojure]]
-
                                      [lein-sassy "1.0.7"]]
 
                       :injections   [(require 'pjstadig.humane-test-output)
@@ -127,14 +127,14 @@
                       :env          {:dev true
                                      :database-url "postgres://localhost:5432/clojuredocs_development"}}}
 
-  :test {    :env {:database-url "postgres://localhost:5432/clojuredocs_test"}}
+ :test {    :env {:database-url "postgres://localhost:5432/clojuredocs_test"}}
 
-   :uberjar {:hooks        [minify-assets.plugin/hooks]
-             :source-paths ["env/prod/clj"]
-             :prep-tasks   ["compile" ["cljsbuild" "once" "min"]]
-             :env          {:production true}
-             :aot          :all
-             :omit-source  true}
+ :uberjar {:hooks        [minify-assets.plugin/hooks]
+           :source-paths ["env/prod/clj"]
+           :prep-tasks   ["compile" ["cljsbuild" "once" "min"]]
+           :env          {:production true}
+           :aot          :all
+           :omit-source  true}
 
  :jvm-opts ^:replace ["-server"
                       "-Xms1g"
