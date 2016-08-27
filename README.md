@@ -13,3 +13,17 @@ Executar no terminal
 $ createdb clojuredocs_development
 $ createdb clojuredocs_test
 ```
+
+## Rodar localmente
+
+Executar no terminal
+
+```
+$ lein repl
+```
+
+Executar no repl
+
+```
+clojuredocs.repl=> (start-server)
+```
