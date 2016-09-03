@@ -13,7 +13,6 @@
                 [ring/ring-defaults "0.2.1"]
                 [compojure "1.5.1"]
                 [hiccup "1.0.5"]
-                [yogthos/config "0.8"]
                 [org.clojure/clojurescript "1.9.93"
                  :scope "provided"]
                 [secretary "1.2.3"]
@@ -21,7 +20,10 @@
                  :exclusions [org.clojure/tools.reader]]
                 [migratus "0.8.28"]
                 [org.postgresql/postgresql "9.4.1207"]
-                [conman "0.6.0"]]
+                [conman "0.6.0"]
+                [mount "0.1.10"]
+                [org.slf4j/slf4j-log4j12 "1.7.9"]
+                [environ "1.1.0"]]
 
  :plugins [[lein-environ "1.0.2"]
            [lein-cljsbuild "1.1.1"]

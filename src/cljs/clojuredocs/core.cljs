@@ -1,9 +1,9 @@
 (ns clojuredocs.core
-  (:require [reagent.core :as reagent :refer [atom]]
-            [reagent.session :as session]
-            [secretary.core :as sec :include-macros true]
-            [accountant.core :as accountant]
-            [clojuredocs.shared :refer [home-page]]))
+ (:require [reagent.core :as reagent :refer [atom]]
+           [reagent.session :as session]
+           [secretary.core :as sec :include-macros true]
+           [accountant.core :as accountant]
+           [clojuredocs.shared :refer [home-page]]))
 
 ;; -------------------------
 ;; Views

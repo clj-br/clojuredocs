@@ -3,7 +3,7 @@
            [compojure.route :refer [not-found resources]]
            [hiccup.page :refer [include-js include-css html5]]
            [clojuredocs.middleware :refer [wrap-middleware]]
-           [config.core :refer [env]]
+           [environ.core :refer [env]]
            [clojuredocs.shared :as sh]))
 
 (defn head []
