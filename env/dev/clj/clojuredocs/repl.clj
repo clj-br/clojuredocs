@@ -1,7 +1,7 @@
 (ns clojuredocs.repl
-  (:use clojuredocs.handler
-        ring.server.standalone
-        [ring.middleware file-info file]))
+ (:use clojuredocs.handler
+       ring.server.standalone
+       [ring.middleware file-info file]))
 
 (defonce server (atom nil))
 
@@ -20,12 +20,12 @@
   "used for starting the server in development mode from REPL"
   [& [port]]
   (let [port (if port (Integer/parseInt port) 3000)]
-    (reset! server
-            (serve (get-handler)
-                   {:port port
-                    :auto-reload? true
-                    :join? false}))
-    (println (str "You can view the site at http://localhost:" port))))
+   (reset! server
+           (serve (get-handler)
+                  {:port port
+                   :auto-reload? true
+                   :join? false}))
+   (println (str "You can view the site at http://localhost:" port))))
 
 (defn stop-server []
   (.stop @server)

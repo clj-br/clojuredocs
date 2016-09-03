@@ -1,6 +1,6 @@
 (ns ^:figwheel-no-load clojuredocs.dev
-  (:require [clojuredocs.core :as core]
-            [figwheel.client :as figwheel :include-macros true]))
+ (:require [clojuredocs.core :as core]
+           [figwheel.client :as figwheel :include-macros true]))
 
 (enable-console-print!)
 
